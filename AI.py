@@ -12,7 +12,7 @@ class FitnessTrainerBot:
         self.headers = {
             "Authorization": f"Bearer {self.openrouter_api_key}",
             "HTTP-Referer": "https://github.com/IvanZhutyaev/FitnessTrackingApp",
-            "X-Title": "ChatBotKey"
+            "X-Title": "ChatBotAIKey"
         }
 
     async def get_ai_response(self, prompt: str) -> str:
@@ -112,8 +112,8 @@ class TelegramBot:
 
 if __name__ == "__main__":
     # Конфигурация
-    TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-    OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+    TELEGRAM_BOT_TOKEN = "8013277160:AAF9UVENmzc4_QvlPN69xt3-b0PiO_EGS0U"
+    OPENROUTER_API_KEY = "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"
 
     # Инициализация и запуск бота
     fitness_bot = FitnessTrainerBot(OPENROUTER_API_KEY)
